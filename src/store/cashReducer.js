@@ -5,9 +5,9 @@ const defaultState = {
 export const cashReducer = (state = defaultState, action) => {
     switch(action.type){
         case 'ADD_CASH':
-            return {...action, cash: state.cash + action.payload}
+            return {...state, cash: state.cash + action.payload}
         case 'GET_CASH':
-            return {...action, cash: state.cash - action.payload}
+            return {...state, cash: state.cash - action.payload}
         default:
             return state
     }
