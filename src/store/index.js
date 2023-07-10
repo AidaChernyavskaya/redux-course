@@ -1,4 +1,4 @@
-import {createStore, combineReducers} from "redux";
+import {combineReducers, createStore} from "redux";
 import {cashReducer} from "./cashReducer";
 import {customerReducer} from "./customerReducer";
 
@@ -7,4 +7,4 @@ const rootReducer = combineReducers({
     customers: customerReducer
 })
 
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
